@@ -13,13 +13,13 @@ library(grid)
 ############# Directorios de trabajo #########################
 
 # Carpeta con shapefile. 
-shp <- st_read("C:/Users/kevin/Documents/R_map_UTM/Departamentos_Honduras/Departamentos_Honduras.shp") ### Se esta usando una direccion absoluta con el fin de separar los scrips 
+shp <- st_read("~/R_map_UTM/Departamentos_Honduras/Departamentos_Honduras.shp") ### Se esta usando una direccion absoluta con el fin de separar los scrips 
 # (Opcional) transformar a UTM si quieres luego trabajar con áreas                                     ### de las capas, aunque no es necesario, normalmente se usa direccion relativas
 shp <- st_transform(shp, 32616)
 # Calcular los límites fijos (toda la capa) para mapa secundario
 limites_fijos <- st_bbox(shp)
 # Carpeta de salida
-salida <- "C:/Users/kevin/Documents/R_map_UTM/Mapas_iguales/"
+salida <- "~/R_map_UTM/Mapas_iguales/"
 # Crear carpeta de salida si no existe
 if (!dir.exists(salida)) dir.create(salida)
 
